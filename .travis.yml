@@ -1,0 +1,6 @@
+language: python
+services:
+  - docker
+script:
+- docker build -t python-demo .
+- docker run --entrypoint 'python' python-demo  -m unittest app_test.py
